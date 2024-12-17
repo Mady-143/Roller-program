@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css/roll.css">
+    
+</head>
+<body>
+    <div class="head">
+        <button id="num">Roll</button>
+        <p id="ok"></p><br>
+        <p id="ok"></p><br>
+        <p id="ok"></p>
+    </div>
+
+    <script>
+        let num = document.getElementById("num");
+        let out = document.getElementById("ok");
+        let max = 10;
+        let min = 5;
+
+        num.addEventListener("click", function() {
+            // Fixed formula for inclusive range
+            let put = Math.floor(Math.random() * (max - min + 1)) + min;
+            out.textContent = put;
+        });
+    </script>
+
+</body>
+</html>
